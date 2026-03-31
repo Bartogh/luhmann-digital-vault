@@ -1,0 +1,16 @@
+# Python virtuelle miljøer
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+
+# MkDocs midlertidige filer
+site/
+
+# System-specifikke filer (Samsung/Windows)
+.DS_Store
+Thumbs.db
+
+# Obsidian-specifikke (valgfrit, hvis du har Obsidian-indstillinger i docs)
+.obsidian/
