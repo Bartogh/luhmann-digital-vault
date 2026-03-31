@@ -4,23 +4,27 @@ on:
     branches:
       - main
 
-# Disse linjer giver robotten lov til at skrive til GitHub Pages
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+        with:
+          fetch-depth: 0 # Henter hele historikken, hvilket MkDocs godt kan lide
+
+      - name: Configure Git Credentials
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-          
+          cache: 'pip'
+
       - run: pip install mkdocs-material mkdocs-roamlinks-plugin
-      
-      # Denne kommando sørger for selve udrulningen
+
       - run: mkdocs gh-deploy --force
