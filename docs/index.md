@@ -13,11 +13,14 @@ Velkommen til mit personlige vidensarkiv. Dette website er bygget som en digital
 
 ```dataview
 LIST title
-FROM "docs"
+FROM ""
 WHERE type = "zettel"
+AND !contains(file.path, "templates")
+AND !contains(file.path, "journal")
 SORT created desc
-LIMIT 10
 ```
+
+---
 ## 📂 Aktuelle Indgange
 
 Her kan du dykke ned i de forskellige spor i arkivet:
