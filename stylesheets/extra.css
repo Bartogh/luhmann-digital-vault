@@ -66,15 +66,26 @@
 }
 
 /* Tilføj en lille "kort-ID" stil i øverste højre hjørne (valgfrit) */
+/* Grundlæggende styling for Zettel ID */
 .md-content__inner h1::after {
     content: "Zettel ID: " attr(id);
-    position: absolute;
-    top: 15px;
-    right: 20px;
     font-family: monospace;
-    font-size: 0.6rem;
+    font-size: 0.55rem;
     opacity: 0.5;
     text-transform: uppercase;
+    display: block; /* Som standard tvinger vi den på sin egen linje */
+    margin-top: 5px;
+}
+
+/* For større skærme (som din Galaxy Book4), flytter vi den op i hjørnet */
+@media screen and (min-width: 60em) {
+    .md-content__inner h1::after {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        margin-top: 0;
+        display: inline;
+    }
 }
 
 /* Styling af vandmærke/footer-tekst uden brug af HTML i Markdown */
