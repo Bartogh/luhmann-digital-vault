@@ -1,0 +1,16 @@
+name: Publish Luhmann Archive
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12' # Stabil version til CI
+      - run: pip install mkdocs-material mkdocs-roamlinks-plugin
+      - run: mkdocs gh-deploy --force
