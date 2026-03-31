@@ -9,6 +9,15 @@ Velkommen til mit personlige vidensarkiv. Dette website er bygget som en digital
 
 ---
 
+## 📇 Overblikket
+
+```dataview
+LIST title
+FROM "docs"
+WHERE type = "zettel"
+SORT created desc
+LIMIT 10
+```
 ## 📂 Aktuelle Indgange
 
 Her kan du dykke ned i de forskellige spor i arkivet:

@@ -33,3 +33,8 @@ extra_css:
 # Vi skal også sørge for at hente den flotte font fra Google Fonts
 extra_javascript:
   - https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap
+
+exclude_docs:
+  - templates/*
+  - journal/* # (Valgfrit, hvis dine dagbognoter skal forblive private)
+  - attachment/.gitkeep # (Valgfrit, hvis du ikke vil have vedhæftede filer i din offentlige dokumentation)
