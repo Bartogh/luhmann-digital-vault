@@ -1,0 +1,35 @@
+site_name: Bartoghs Digitale Zettelkasten
+theme:
+  name: material
+  custom_dir: overrides
+  language: da
+  palette: 
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: grey
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: Skift til mørkt tema
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: deep orange
+      toggle:
+        icon: material/weather-night
+        name: Skift til lyst tema
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - content.code.copy
+
+plugins:
+  - search
+  - roamlinks # Dette plugin gør [[Wiki-links]] klikbare ligesom i Obsidian
+
+extra_css:
+  - stylesheets/extra.css
+
+# Vi skal også sørge for at hente den flotte font fra Google Fonts
+extra_javascript:
+  - https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap
