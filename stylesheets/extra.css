@@ -1,0 +1,69 @@
+/* Grundlæggende papir-æstetik for det lyse tema */
+[data-md-color-scheme="default"] .md-content__inner {
+    background-color: #fdf6e3; /* Klassisk "Solarized" papirfarve */
+    border: 1px solid #e2d7b5;
+    border-radius: 2px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.05); /* Subtil skygge som et lagt kort */
+    padding: 40px;
+    font-family: "EB Garamond", serif; /* En klassisk bog-font */
+    line-height: 1.6;
+    min-height: 80vh;
+    position: relative; /* Nødvendig for at placere stregen korrekt */
+    background-image: 
+        /* Den lodrette røde streg */
+        linear-gradient(90deg, transparent 39px, #e89a9a 39px, #e89a9a 41px, transparent 41px);
+    background-size: 100% 100%;
+    padding-left: 60px; /* Flyt teksten væk fra stregen */
+}
+
+/* "Hulmønster" eller markering foroven (Luhmann-stil) */
+[data-md-color-scheme="default"] .md-content__inner::before {
+    content: "•";
+    color: #d33682;
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+/* Mørkt tema - Et mere moderne arkiv-look */
+[data-md-color-scheme="slate"] .md-content__inner {
+    background-color: #1e2124;
+    border: 1px solid #333;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    padding: 40px;
+    position: relative;
+    background-image:
+        /* Den lodrette røde streg */
+        linear-gradient(90deg, transparent 39px, #444 39px, #444 41px, transparent 41px);
+    padding-left: 60px;
+}
+
+/* Overskrifter der ligner håndskrevet/maskinskrevne titler */
+.md-typeset h1 {
+    font-weight: 700;
+    border-bottom: 2px solid #d33682;
+    padding-bottom: 10px;
+    color: var(--md-primary-fg-color);
+}
+
+/* Tilføj en lille "kort-ID" stil i øverste højre hjørne (valgfrit) */
+.md-content__inner h1::after {
+    content: "Zettel ID: " attr(id);
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-family: monospace;
+    font-size: 0.6rem;
+    opacity: 0.5;
+    text-transform: uppercase;
+}
+
+/* Styling af vandmærke/footer-tekst uden brug af HTML i Markdown */
+article hr + p {
+    font-size: 0.7rem;
+    color: var(--md-default-fg-color--light);
+    text-align: right;
+    font-style: italic;
+    margin-top: 2em;
+}
