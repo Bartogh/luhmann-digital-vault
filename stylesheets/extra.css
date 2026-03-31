@@ -40,11 +40,29 @@
 }
 
 /* Overskrifter der ligner håndskrevet/maskinskrevne titler */
+/* Overskrifter - Fælles layout */
 .md-typeset h1 {
     font-weight: 700;
-    border-bottom: 2px solid #d33682;
+    border-bottom: 2px solid #d33682; /* Den flotte pink kantbeholdes */
     padding-bottom: 10px;
-    color: var(--md-primary-fg-color);
+    position: relative;
+}
+
+/* Specifik farve for Lyst Tema (Sort tekst på beige papir) */
+[data-md-color-scheme="default"] .md-typeset h1 {
+    color: #073642; /* En meget mørk blå/sort der passer til papir */
+}
+
+/* Specifik farve for Mørkt Tema (Hvid/Lys tekst på mørk grå) */
+[data-md-color-scheme="slate"] .md-typeset h1 {
+    color: #eee; /* En knækket hvid, der er let at læse */
+}
+
+/* Bonus: Sørg for at alle andre overskrifter (h2, h3 osv.) også er læselige i mørke */
+[data-md-color-scheme="slate"] .md-typeset h2, 
+[data-md-color-scheme="slate"] .md-typeset h3,
+[data-md-color-scheme="slate"] .md-typeset h4 {
+    color: #ccc;
 }
 
 /* Tilføj en lille "kort-ID" stil i øverste højre hjørne (valgfrit) */
