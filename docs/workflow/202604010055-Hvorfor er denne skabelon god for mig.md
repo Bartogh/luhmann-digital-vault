@@ -15,4 +15,4 @@ tags:
 * **Type: journal:** Ved at give den denne type, sørger vi for, at din "rene" visning på forsiden (som vi lavede før) automatisk udelukker disse personlige noter.
 
 ---
-*Oprindeligt fra: {{source_note_link}}*
+*Oprindeligt fra: {{link}}*
