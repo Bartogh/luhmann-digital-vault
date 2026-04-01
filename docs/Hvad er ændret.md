@@ -18,4 +18,4 @@ tags:
 - **`[[{{link}}]]`**: Jeg har sat klammer omkring, så det bliver et klikbart link med det samme.
 
 ---
-*Oprindeligt fra: [[[[journal/2026-04/2026-04-01]]]]*
+*Oprindeligt fra: [[journal/2026-04/2026-04-01]]*
