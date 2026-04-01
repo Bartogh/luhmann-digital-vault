@@ -14,3 +14,6 @@ Thumbs.db
 
 # Obsidian-specifikke (valgfrit, hvis du har Obsidian-indstillinger i docs)
 .obsidian/
+
+# VSCode-specifikke filer
+.vscode/
