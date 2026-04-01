@@ -21,6 +21,7 @@ SORT created desc
 ```
 
 ---
+
 ## 📂 Aktuelle Indgange
 
 Her kan du dykke ned i de forskellige spor i arkivet:
@@ -36,8 +37,6 @@ Dette arkiv er opbygget af "atomare" noter. Det betyder, at hver note indeholder
 
 > "Uden skrivning kan man ikke tænke – i hvert fald ikke på en sofistikeret måde."
 > — *Niklas Luhmann*
-
-%% waypoint %%
 
 ---
 Sidst opdateret: *31. marts 2026* | System: *Python 3.14.3 & MkDocs-Material*
